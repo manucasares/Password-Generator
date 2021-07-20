@@ -1,0 +1,114 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #33348d;
+    --dark-color: #1f1f51;
+    --input-text-background: #131330;
+}
+
+html, body {
+    font-family: 'Roboto', sans-serif, Helvetica;
+    color: white;
+    background: var(--main-color);
+    min-height: 100vh;
+    height: 100%;
+}
+
+.content_wrapper {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    width: 85%;
+    background: var(--dark-color);
+    padding: 2rem 1.5rem;
+    border-radius: 3px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, .4);
+}
+
+.title {
+    text-align: center;
+    font-weight: 400;
+    font-size: clamp(18px, 7.4vw, 36px);
+    margin: 0 0 1.7rem 0;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.option-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.option {
+    font-weight: 500;
+}
+
+.option-container input[type="text"] {
+    width: 100%;
+    background: var(--input-text-background);
+    border: none;
+    border-radius: 3px;
+    padding: 1.1rem .6rem;
+    color: white;
+    outline: 1px solid gray;
+}
+
+.option-container input[type="number"] {
+    width: 3rem;
+}
+
+.input-icon {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--main-color);
+    padding: .5rem .7rem;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.input-icon i {
+    font-size: 1.2rem;
+}
+
+.generate-btn {
+    padding: .5rem;
+    border-radius: 3px;
+    border: none;
+    background: var(--main-color);
+    color: white;
+    font-weight: 500;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.generate-btn:hover {
+
+}
+
+
+@media (min-width: 768px) {
+    .content {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .content {
+        width: 30%;
+    }
+}
