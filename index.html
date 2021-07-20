@@ -19,9 +19,9 @@
     
             <h2 class="title">Password Generator</h2>
     
-            <form class="form">
+            <form class="form" id="form">
                 <div class="option-container">
-                    <input type="text" id="input" >
+                    <input type="text" id="generated_password_input" disabled >
         
                     <div class="input-icon">
                         <i class="far fa-clipboard"></i>
@@ -30,7 +30,7 @@
     
                 <div class="option-container">
                     <label class="option">Password length</label>
-                    <input type="number" id="password_length_input" min="1" max="30">
+                    <input type="number" id="password_length_input" min="1" value="10" max="50">
                 </div>
     
                 <div class="option-container">
