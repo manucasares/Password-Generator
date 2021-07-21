@@ -35,7 +35,7 @@ html, body {
 .title {
     text-align: center;
     font-weight: 400;
-    font-size: clamp(18px, 7.4vw, 36px);
+    font-size: clamp(18px, 7vw, 34px);
     margin: 0 0 1.7rem 0;
 }
 
@@ -79,6 +79,7 @@ html, body {
     padding: .5rem .7rem;
     border-radius: 2px;
     cursor: pointer;
+    transition: background .3s ease;
 }
 
 .input-icon i {
@@ -92,12 +93,16 @@ html, body {
     background: var(--main-color);
     color: white;
     font-weight: 500;
-    transition: all .3s ease;
+    transition: padding .3s ease;
     cursor: pointer;
 }
 
 .generate-btn:hover {
+    padding: .7rem;
+}
 
+.copied {
+    background: rgb(0, 160, 0);
 }
 
 

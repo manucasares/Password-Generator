@@ -7,6 +7,8 @@ const include_lowercase = document.querySelector( '#include_lowercase' );
 const include_uppercase = document.querySelector( '#include_uppercase' );
 const include_numbers = document.querySelector( '#include_numbers' );
 const include_symbols = document.querySelector( '#include_symbols' );
+const copy_btn = document.querySelector( '#copy_btn' ); 
+
 
 // Characters strings
 const lowercase = 'abcdefghijklmnopqrstuvwxyz';
@@ -46,4 +48,29 @@ form.addEventListener( 'submit', ( e ) => {
 
     // Colcamos la password en el input
     generated_password_input.value = randomPassword;
+})
+
+
+
+copy_btn.addEventListener( 'click', () => {
+
+    if ( !generated_password_input.value ) return;
+
+    generated_password_input.disabled = false;
+
+    // Seleccionamos
+    generated_password_input.select();
+
+    // Copiamos
+    document.execCommand( "Copy" );
+
+    // Estilos
+    copy_btn.classList.add( 'copied' );
+
+    setTimeout( () => {
+        copy_btn.classList.remove( 'copied' );     
+    }, 1000 );
+
+
+    generated_password_input.disabled = true;
 })
