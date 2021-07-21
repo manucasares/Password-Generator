@@ -1,4 +1,4 @@
-# Personal Portfolio
+# Password Generator
 
 ![Password generator](https://i.imgur.com/mqF8eVx.png "Password generator")
 
@@ -9,9 +9,6 @@ _Un simple generador de contraseñas personalizable._
 ```
 https://github.com/manucasares/Password-Generator.git
 ```
-
-
-
 
 ## Construido con 🛠️
 
